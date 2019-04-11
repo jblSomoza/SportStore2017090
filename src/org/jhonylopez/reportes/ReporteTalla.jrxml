@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteTalla" language="groovy" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="1746e50e-abc9-4524-944e-5cb553f5c943">
+	<property name="ireport.zoom" value="1.3310000000000006"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[sp_ListarTallas]]>
+	</queryString>
+	<field name="codigoTalla" class="java.lang.Integer"/>
+	<field name="descripcion" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="107" splitType="Stretch">
+			<staticText>
+				<reportElement x="247" y="0" width="291" height="89" uuid="8da8c37c-f4a6-4e67-b6cf-515671e465d8"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Goudy Stout" size="25"/>
+				</textElement>
+				<text><![CDATA[Piensa Diferente ...]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="11" y="0" width="204" height="89" uuid="35c27354-25f7-4651-ad9b-584426775579"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Goudy Stout" size="25"/>
+				</textElement>
+				<text><![CDATA[Tallas]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="360" y="15" width="100" height="20" uuid="ffee7fb8-d144-449c-9c7a-2fde86c8f456"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField pattern="HH.mm.ss">
+				<reportElement x="472" y="15" width="100" height="20" uuid="d767ab52-79a0-44f8-928b-95e87afdff3c"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="34" y="18" width="100" height="20" uuid="e916b58a-3d34-4aa0-a9b3-451da61ef879"/>
+				<textElement>
+					<font isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Código Talla]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="197" y="18" width="100" height="20" uuid="634f1ac4-c992-403c-a1ad-4f92598c2cc4"/>
+				<textElement>
+					<font isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Descripcion]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="72" splitType="Stretch">
+			<textField>
+				<reportElement x="34" y="16" width="100" height="20" uuid="3b4246ed-9aab-4f9e-9d59-0dc1c5330f95"/>
+				<textFieldExpression><![CDATA[$F{codigoTalla}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="197" y="16" width="100" height="20" uuid="ec14e984-56c2-4e04-9c31-a8997f830305"/>
+				<textFieldExpression><![CDATA[$F{descripcion}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="50" width="572" height="1" forecolor="#000000" uuid="bceb9a08-e7fd-475c-84a1-58190497d1b2"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="110" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<staticText>
+				<reportElement x="11" y="24" width="135" height="20" uuid="67e08a79-ece7-4bf7-b5d1-d32596277635"/>
+				<textElement>
+					<font isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Next Store Application]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>

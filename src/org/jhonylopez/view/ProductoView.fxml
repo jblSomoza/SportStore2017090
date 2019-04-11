@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.jhonylopez.controller.ProductoController">
+   <children>
+      <ImageView fitHeight="600.0" fitWidth="800.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/fondoProducto.png" />
+         </image>
+      </ImageView>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="319.0" layoutY="14.0" prefHeight="57.0" prefWidth="183.0" text="Productos" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Bodoni MT" size="29.0" />
+         </font>
+      </Label>
+      <Label layoutX="85.0" layoutY="71.0" text="Descripcion" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="85.0" layoutY="102.0" prefHeight="21.0" prefWidth="78.0" text="Categoria" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="97.0" layoutY="134.0" text="Marca" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="102.0" layoutY="166.0" text="Talla" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="93.0" layoutY="196.0" text="Imagen" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtDescripcion" alignment="CENTER_RIGHT" layoutX="202.0" layoutY="69.0" prefHeight="25.0" prefWidth="321.0" promptText="Ingrese una descripcion" />
+      <ComboBox fx:id="cmbCategoria" layoutX="202.0" layoutY="100.0" prefHeight="25.0" prefWidth="172.0" promptText="Seleccione categoria" />
+      <ComboBox fx:id="cmbMarca" layoutX="202.0" layoutY="132.0" prefHeight="25.0" prefWidth="172.0" promptText="Seleccione marca" />
+      <ComboBox fx:id="cmbTalla" layoutX="202.0" layoutY="164.0" prefHeight="25.0" prefWidth="172.0" promptText="Seleccione talla" />
+      <TextField fx:id="txtImagen" alignment="CENTER_RIGHT" layoutX="202.0" layoutY="194.0" prefHeight="25.0" prefWidth="172.0" promptText="Ingrese una imagen" />
+      <TableView fx:id="tblProductos" layoutX="79.0" layoutY="266.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="200.0" prefWidth="663.0">
+        <columns>
+          <TableColumn fx:id="colExistencia" prefWidth="145.0" text="Existencia" />
+          <TableColumn fx:id="colPrecioUnitario" prefWidth="156.0" text="Precio Unitario" />
+            <TableColumn fx:id="colPrecioPorDocena" prefWidth="179.0" text="Precio por Docena" />
+            <TableColumn fx:id="colPrecioPorMayor" prefWidth="178.0" text="Precio por Mayor" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnNuevo" layoutX="82.0" layoutY="496.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="32.0" prefWidth="72.0" text="Nuevo">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="btnEditar" layoutX="252.0" layoutY="496.0" mnemonicParsing="false" onAction="#editar" prefHeight="32.0" prefWidth="72.0" text="Editar">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="btnEliminar" layoutX="424.0" layoutY="496.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="32.0" prefWidth="72.0" text="Eliminar">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="btnReporte" layoutX="656.0" layoutY="496.0" mnemonicParsing="false" onAction="#generarReporte" prefHeight="32.0" prefWidth="72.0" text="Reporte">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="btnImagen" layoutX="397.0" layoutY="194.0" mnemonicParsing="false" onAction="#agregarImagen" text="....">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <ImageView fx:id="imgProducto" fitHeight="124.0" fitWidth="183.0" layoutX="446.0" layoutY="104.0" pickOnBounds="true" preserveRatio="true" />
+      <Hyperlink layoutX="594.0" layoutY="28.0" onAction="#menuPrincipal" prefHeight="29.0" prefWidth="134.0" text="Menu Principal" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Hyperlink>
+   </children>
+</AnchorPane>

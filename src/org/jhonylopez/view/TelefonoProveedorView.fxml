@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.jhonylopez.controller.TelefonoProveedorController">
+   <children>
+      <ImageView fitHeight="500.0" fitWidth="800.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/fondoTelefonoProveedor.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="539.0" layoutY="26.0" text="Telefono Proveedor" textFill="WHITE">
+         <font>
+            <Font name="Bodoni MT" size="29.0" />
+         </font>
+      </Label>
+      <Label layoutX="47.0" layoutY="76.0" text="CodigoTelefono Proveedor" textFill="WHITE" />
+      <Label layoutX="47.0" layoutY="179.0" prefHeight="17.0" prefWidth="62.0" text="Numero" textFill="WHITE" />
+      <Label layoutX="47.0" layoutY="146.0" text="Descripcion" textFill="WHITE" />
+      <Label layoutX="43.0" layoutY="112.0" text="Codigo Proveedor" textFill="WHITE" />
+      <ComboBox fx:id="cmbTelefonoProveedor" layoutX="212.0" layoutY="72.0" prefHeight="25.0" prefWidth="260.0" promptText="---Codigo Telefono Proveedor---" />
+      <ComboBox fx:id="cmbProveedor" layoutX="212.0" layoutY="108.0" prefHeight="25.0" prefWidth="220.0" promptText="--------Codigo Proveedor---------" />
+      <TextField fx:id="txtDescripcion" alignment="CENTER_RIGHT" layoutX="213.0" layoutY="142.0" prefHeight="25.0" prefWidth="220.0" promptText="Ingrese una descripcion" />
+      <TextField fx:id="txtNumero" alignment="CENTER_RIGHT" layoutX="213.0" layoutY="175.0" prefHeight="25.0" prefWidth="220.0" promptText="Ingrese numero " />
+      <TableView fx:id="tblTelefonoProveedores" layoutX="31.0" layoutY="227.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="200.0" prefWidth="739.0">
+        <columns>
+          <TableColumn fx:id="colCodigoTelefono" prefWidth="142.0" text="Codigo Telefono" />
+          <TableColumn fx:id="colCodigoProveedor" prefWidth="176.0" text="Codigo Proveedor" />
+            <TableColumn fx:id="colDescripcion" prefWidth="240.0" text="Descripcion" />
+            <TableColumn fx:id="colNumero" prefWidth="180.0" text="Numero" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnNuevo" layoutX="43.0" layoutY="433.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="35.0" prefWidth="97.0" text="Nuevo" />
+      <Button fx:id="btnEditar" layoutX="225.0" layoutY="433.0" mnemonicParsing="false" onAction="#editar" prefHeight="35.0" prefWidth="97.0" text="Editar" />
+      <Button fx:id="btnEliminar" layoutX="411.0" layoutY="433.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="35.0" prefWidth="97.0" text="Eliminar" />
+      <Button fx:id="btnReporte" layoutX="609.0" layoutY="433.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="97.0" text="Reporte" />
+      <Hyperlink layoutX="603.0" layoutY="83.0" onAction="#menuProveedor" text="Regresar" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Hyperlink>
+   </children>
+</AnchorPane>

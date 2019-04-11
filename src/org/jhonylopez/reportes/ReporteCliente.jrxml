@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteCliente" language="groovy" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="930b870f-f174-4b86-a179-5f78f45f8fb7">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="codigoCliente" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[1]]></defaultValueExpression>
+	</parameter>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["C:\\Users\\bryan\\Documents\\NetBeansProjects\\SportStore2017090\\src\\org\\jhonylopez\\reportes\\"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select *from Clientes where codigoCliente = $P{codigoCliente}]]>
+	</queryString>
+	<field name="codigoCliente" class="java.lang.Integer"/>
+	<field name="nombre" class="java.lang.String"/>
+	<field name="nit" class="java.lang.String"/>
+	<field name="direccion" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="65" splitType="Stretch">
+			<staticText>
+				<reportElement x="263" y="12" width="298" height="47" uuid="502203f5-0182-4411-a7f7-da2e2195e5bb"/>
+				<textElement>
+					<font size="30" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Piensa Diferente ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="15" y="12" width="216" height="47" uuid="fd1326eb-9c29-4f0e-aa98-92a6bf22af20"/>
+				<textElement>
+					<font size="30" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Clientes]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="36" splitType="Stretch">
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="341" y="15" width="100" height="20" uuid="93131d31-a522-47cf-9b96-0a1f0928d9ef"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField pattern="HH.mm.ss">
+				<reportElement x="472" y="15" width="100" height="20" uuid="2afc9cb8-dc3d-408c-b74d-0da6492fa4d1"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="42" splitType="Stretch">
+			<staticText>
+				<reportElement x="8" y="10" width="100" height="20" uuid="448274fb-6794-42a9-907e-fed8ef18a7cb"/>
+				<textElement>
+					<font isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Código Cliente]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="131" y="10" width="100" height="20" uuid="8ed2fc68-2e43-4191-a95d-222b2aa19723"/>
+				<textElement>
+					<font isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Nombre]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="263" y="10" width="100" height="20" uuid="256ccb7c-484c-4e35-90d0-baba476fabcb"/>
+				<textElement>
+					<font isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Nit]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="393" y="10" width="100" height="20" uuid="b612c51e-4c23-4d70-9d33-e06103dcb94d"/>
+				<textElement>
+					<font isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Direccion]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="51" splitType="Stretch">
+			<textField>
+				<reportElement x="8" y="15" width="100" height="20" uuid="1bf3b38b-8f3c-4da7-a21f-aac6c267bfa3"/>
+				<textFieldExpression><![CDATA[$F{codigoCliente}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="131" y="15" width="100" height="20" uuid="e7308e78-ebba-48b0-b0d6-b5ce48961b8b"/>
+				<textFieldExpression><![CDATA[$F{nombre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="263" y="15" width="100" height="20" uuid="64ab3547-7603-4e5c-9287-b4c12cfaa1f1"/>
+				<textFieldExpression><![CDATA[$F{nit}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="393" y="15" width="100" height="20" uuid="ee4e85a5-d5b6-4ffa-afce-8c6a768b131c"/>
+				<textFieldExpression><![CDATA[$F{direccion}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="50">
+			<subreport>
+				<reportElement x="0" y="0" width="572" height="50" uuid="6204e73d-6f9d-47cb-a959-0f69d60eee29"/>
+				<subreportParameter name="codigoCliente">
+					<subreportParameterExpression><![CDATA[$F{codigoCliente}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "ReporteCliente_Telefono.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="50">
+			<subreport>
+				<reportElement x="0" y="0" width="572" height="50" uuid="1e59c3b6-208d-45b5-977c-40d6d3c5741f"/>
+				<subreportParameter name="codigoCliente">
+					<subreportParameterExpression><![CDATA[$F{codigoCliente}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "ReporteCliente_Email.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+</jasperReport>

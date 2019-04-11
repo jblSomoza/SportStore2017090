@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.web.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.jhonylopez.controller.LoginController">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/fondoLogin.png" />
+         </image></ImageView>
+      <Label alignment="CENTER" layoutX="182.0" layoutY="14.0" prefHeight="70.0" prefWidth="236.0" text="Bienvenido" textFill="WHITE">
+         <font>
+            <Font name="Bodoni MT" size="40.0" />
+         </font>
+      </Label>
+      <Label layoutX="70.0" layoutY="133.0" text="USUARIO" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="69.0" layoutY="183.0" text="CONTRASEÑA" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtUsuario" layoutX="186.0" layoutY="131.0" prefHeight="25.0" prefWidth="214.0" promptText="USERNAME" />
+      <PasswordField fx:id="txtPassword" layoutX="186.0" layoutY="181.0" prefHeight="25.0" prefWidth="214.0" promptText="PASSWORD" />
+      <ComboBox fx:id="cmbTipoUsuario" layoutX="218.0" layoutY="246.0" prefWidth="150.0" promptText="TIPO DE USUARIO" />
+      <Button fx:id="btnLogin" layoutX="70.0" layoutY="320.0" mnemonicParsing="false" onAction="#login" prefHeight="25.0" prefWidth="63.0" text="Login" />
+      <Button fx:id="btnRegister" layoutX="187.0" layoutY="320.0" mnemonicParsing="false" onAction="#ventanaRegistro" prefHeight="25.0" prefWidth="63.0" text="Register" />
+      <Button fx:id="btnCancelar" layoutX="293.0" layoutY="320.0" mnemonicParsing="false" onAction="#cancelar" prefHeight="25.0" prefWidth="63.0" text="Cancelar" />
+      <Button fx:id="btnReporte" layoutX="387.0" layoutY="320.0" mnemonicParsing="false" onAction="#activarBotonReporte" prefHeight="25.0" prefWidth="63.0" text="Reporte" />
+      <Button fx:id="btnSalir" layoutX="480.0" layoutY="320.0" mnemonicParsing="false" onAction="#salir" prefHeight="25.0" prefWidth="63.0" text="Salir" />
+   </children>
+</AnchorPane>

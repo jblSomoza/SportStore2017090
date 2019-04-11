@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.jhonylopez.controller.MenuPrincipalController">
+   <children>
+      <ImageView fitHeight="500.0" fitWidth="700.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/FondoMenuPrincipal.png" />
+         </image>
+      </ImageView>
+      <MenuBar layoutX="7.0" layoutY="8.0" prefHeight="25.0" prefWidth="226.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Modulos">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#ventanaCategoria" text="Categorias" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaMarca" text="Marcas" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaTalla" text="Tallas" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaCliente" text="Clientes" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaProveedor" text="Proveedores" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaProducto" text="Productos" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaCompra" text="Compras" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Reportes">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#reporteCategoria" text="Reporte Categorias" />
+                  <MenuItem mnemonicParsing="false" onAction="#reporteMarca" text="Reporte Marcas" />
+                  <MenuItem mnemonicParsing="false" onAction="#reporteTalla" text="Reporte Tallas" />
+                  <MenuItem mnemonicParsing="false" onAction="#reporteCliente" text="Reporte Clientes" />
+                  <MenuItem mnemonicParsing="false" onAction="#reporteProducto" text="Reporte Productos" />
+                  <MenuItem mnemonicParsing="false" onAction="#reporteProveedor" text="Reporte Proveedores" />
+                  <MenuItem mnemonicParsing="false" text="Reporte Facturas" />
+                  <MenuItem mnemonicParsing="false" text="Reporte Compras" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Ayuda">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Acerca de" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </children>
+</AnchorPane>

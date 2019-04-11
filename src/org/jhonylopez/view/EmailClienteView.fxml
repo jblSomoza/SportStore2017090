@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.jhonylopez.controller.EmailClienteController">
+   <children>
+      <ImageView fitHeight="500.0" fitWidth="800.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/fondoEmailCliente.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="285.0" layoutY="14.0" prefHeight="43.0" prefWidth="231.0" text="Email Cliente" textFill="WHITE">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </Label>
+      <Label layoutX="64.0" layoutY="76.0" text="Código Email C." textFill="WHITE" />
+      <Label layoutX="64.0" layoutY="109.0" text="Codigo Cliente" textFill="WHITE" />
+      <Label layoutX="64.0" layoutY="142.0" text="Descripcion" textFill="WHITE" />
+      <Label layoutX="64.0" layoutY="173.0" text="Email" textFill="WHITE" />
+      <ComboBox fx:id="cmbCodigoEmailCliente" layoutX="191.0" layoutY="72.0" prefHeight="25.0" prefWidth="169.0" promptText="----Codigo Email C.---" />
+      <ComboBox fx:id="cmbCodigoCliente" layoutX="191.0" layoutY="105.0" prefHeight="25.0" prefWidth="169.0" promptText="---Codigo Cliente---" />
+      <TextField fx:id="txtDescripcion" alignment="CENTER_RIGHT" layoutX="192.0" layoutY="138.0" prefHeight="25.0" prefWidth="231.0" promptText="Ingrese una descripcion" />
+      <TextField fx:id="txtEmail" alignment="CENTER_RIGHT" layoutX="192.0" layoutY="169.0" prefHeight="25.0" prefWidth="231.0" promptText="Ingrese email" />
+      <TableView fx:id="tblEmailClientes" layoutX="36.0" layoutY="234.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="200.0" prefWidth="729.0">
+        <columns>
+          <TableColumn fx:id="colCodigoEmailCliente" prefWidth="120.0" text="Codigo Email C." />
+          <TableColumn fx:id="colCodigoCliente" prefWidth="155.0" text="Codigo Cliente" />
+            <TableColumn fx:id="colDescripcion" prefWidth="235.0" text="Descripcion" />
+            <TableColumn fx:id="colEmail" prefWidth="218.0" text="Email" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnNuevo" layoutX="69.0" layoutY="448.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="29.0" prefWidth="68.0" text="Nuevo">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="btnEditar" layoutX="198.0" layoutY="448.0" mnemonicParsing="false" onAction="#editar" prefHeight="29.0" prefWidth="68.0" text="Editar">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="btnEliminar" layoutX="333.0" layoutY="448.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="29.0" prefWidth="68.0" text="Eliminar">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="btnReporte" layoutX="454.0" layoutY="448.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="62.0" text="Reporte">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Hyperlink layoutX="581.0" layoutY="103.0" onAction="#menuCliente" text="Regresar" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Hyperlink>
+   </children>
+</AnchorPane>

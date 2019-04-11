@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.jhonylopez.controller.CategoriaController">
+   <children>
+      <ImageView fitHeight="500.0" fitWidth="700.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/fondoCategoria.png" />
+         </image>
+      </ImageView>
+      <Label alignment="CENTER" layoutX="231.0" layoutY="14.0" prefHeight="35.0" prefWidth="213.0" text="Categorias" textFill="WHITE">
+         <font>
+            <Font name="Bodoni MT" size="29.0" />
+         </font>
+      </Label>
+      <Label layoutX="102.0" layoutY="85.0" prefHeight="25.0" prefWidth="102.0" text="Codigo Categoria" textFill="WHITE" />
+      <Label layoutX="102.0" layoutY="117.0" prefHeight="25.0" prefWidth="73.0" text="Descripcion" textFill="#f2f2f2" />
+      <ComboBox fx:id="cmbCategoria" layoutX="222.0" layoutY="85.0" prefHeight="25.0" prefWidth="158.0" promptText="---------Codigo-------" />
+      <TextField fx:id="txtDescripcion" alignment="TOP_RIGHT" layoutX="222.0" layoutY="117.0" prefHeight="25.0" prefWidth="326.0" promptText="Ingrese la descripcion de la categoria" />
+      <TableView fx:id="tblCategorias" layoutX="70.0" layoutY="166.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="236.0" prefWidth="569.0">
+        <columns>
+          <TableColumn fx:id="colCodigo" prefWidth="106.0" text="Codigo " />
+          <TableColumn fx:id="colDescripcion" prefWidth="462.0" text="Descripcion" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnNuevo" layoutX="66.0" layoutY="421.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="35.0" prefWidth="87.0" text="Nuevo">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="btnEliminar" layoutX="231.0" layoutY="421.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="35.0" prefWidth="87.0" text="Eliminar">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="btnEditar" layoutX="385.0" layoutY="421.0" mnemonicParsing="false" onAction="#editar" prefHeight="35.0" prefWidth="87.0" text="Editar">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="btnReporte" layoutX="548.0" layoutY="421.0" mnemonicParsing="false" onAction="#GenerarReporte" prefHeight="35.0" prefWidth="87.0" text="Reporte">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Hyperlink layoutX="560.0" layoutY="20.0" onAction="#menuPrincipal" text="Menu Principal" textFill="WHITE" />
+   </children>
+   <effect>
+      <InnerShadow />
+   </effect>
+</AnchorPane>

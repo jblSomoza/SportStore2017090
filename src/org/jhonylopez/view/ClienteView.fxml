@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.jhonylopez.controller.ClienteController">
+   <children>
+      <ImageView fitHeight="600.0" fitWidth="800.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/fondoClientes.png" />
+         </image>
+      </ImageView>
+      <Label alignment="CENTER" layoutX="294.0" layoutY="14.0" prefHeight="35.0" prefWidth="213.0" text="Clientes" textAlignment="JUSTIFY" textFill="WHITE">
+         <font>
+            <Font name="Bodoni MT" size="29.0" />
+         </font>
+      </Label>
+      <Label layoutX="43.0" layoutY="85.0" prefHeight="25.0" prefWidth="102.0" text="Codigo Cliente" textFill="WHITE" />
+      <Label layoutX="43.0" layoutY="123.0" prefHeight="25.0" prefWidth="73.0" text="Nombre" textFill="WHITE" />
+      <Label layoutX="43.0" layoutY="158.0" prefHeight="25.0" prefWidth="73.0" text="Nit" textFill="WHITE" />
+      <Label layoutX="43.0" layoutY="193.0" prefHeight="25.0" prefWidth="73.0" text="Direccion" textFill="WHITE" />
+      <ComboBox fx:id="cmbCliente" layoutX="161.0" layoutY="85.0" prefHeight="25.0" prefWidth="158.0" promptText="---------Codigo-------" />
+      <TextField fx:id="txtNombre" alignment="TOP_RIGHT" layoutX="161.0" layoutY="123.0" prefHeight="25.0" prefWidth="305.0" promptText="Agregar nombre del cliente" />
+      <TextField fx:id="txtDireccion" alignment="TOP_RIGHT" layoutX="161.0" layoutY="193.0" prefHeight="25.0" prefWidth="305.0" promptText="Agregar direccion del cliente" />
+      <TextField fx:id="txtNit" alignment="TOP_RIGHT" layoutX="161.0" layoutY="158.0" prefHeight="25.0" prefWidth="305.0" promptText="Agregar nit del cliente" />
+      <TableView fx:id="tblClientes" layoutX="87.0" layoutY="275.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="244.0" prefWidth="628.0">
+        <columns>
+          <TableColumn fx:id="colCodigo" prefWidth="140.0" text="Codigo Cliente" />
+          <TableColumn fx:id="colNombre" prefWidth="174.0" text="Nombre" />
+            <TableColumn fx:id="colNit" prefWidth="140.0" text="Nit" />
+            <TableColumn fx:id="colDireccion" prefWidth="173.0" text="Direccion" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnNuevo" layoutX="87.0" layoutY="537.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="35.0" prefWidth="102.0" text="Nuevo">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="btnEliminar" layoutX="263.0" layoutY="537.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="35.0" prefWidth="102.0" text="Eliminar">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="btnEditar" layoutX="429.0" layoutY="537.0" mnemonicParsing="false" onAction="#editar" prefHeight="35.0" prefWidth="102.0" text="Editar">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="btnReporte" layoutX="613.0" layoutY="537.0" mnemonicParsing="false" onAction="#GenerarReporte" prefHeight="35.0" prefWidth="102.0" text="Reporte">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Hyperlink layoutX="610.0" layoutY="17.0" onAction="#menuPrincipal" text="Menu Principal" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font></Hyperlink>
+      <Hyperlink layoutX="602.0" layoutY="56.0" onAction="#ventanaTelefonoCliente" text="Agregar Teléfono" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Hyperlink>
+      <Hyperlink layoutX="602.0" layoutY="96.0" onAction="#ventanaEmailCliente" text="Agregar Email" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Hyperlink>
+   </children>
+</AnchorPane>

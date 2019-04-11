@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="575.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.jhonylopez.controller.RegistroController">
+   <children>
+      <ImageView fitHeight="500.0" fitWidth="575.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/fondoRegistroUsuarios.png" />
+         </image></ImageView>
+      <Label layoutX="173.0" layoutY="14.0" text="Ingreso de Usuarios" textFill="WHITE">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </Label>
+      <Label layoutX="39.0" layoutY="75.0" text="Nombre del Usuario" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="39.0" layoutY="123.0" text="Email del Usuario" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="39.0" layoutY="173.0" text="Usuario" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="39.0" layoutY="221.0" text="Contraseña" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="38.0" layoutY="273.0" text="Tipo de Usuario" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtNombreUsuario" layoutX="196.0" layoutY="73.0" prefHeight="25.0" prefWidth="212.0" promptText="Ingrese el nombre del usuario" />
+      <TextField fx:id="txtEmailUsuario" layoutX="194.0" layoutY="121.0" prefHeight="25.0" prefWidth="212.0" promptText="Ingrese el email del usuario" />
+      <TextField fx:id="txtUsuario" layoutX="196.0" layoutY="171.0" prefHeight="25.0" prefWidth="212.0" promptText="Ingrese usuario" />
+      <PasswordField fx:id="txtPassword" layoutX="194.0" layoutY="219.0" prefHeight="25.0" prefWidth="212.0" promptText="Ingrese contraseña" />
+      <ComboBox fx:id="cmbTipoUsuario" layoutX="196.0" layoutY="271.0" prefHeight="25.0" prefWidth="212.0" promptText="Seleccione tipo de usuario" />
+      <Button fx:id="btnNuevo" layoutX="196.0" layoutY="378.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="37.0" prefWidth="75.0" text="Nuevo" />
+      <Button fx:id="btnCancelar" layoutX="406.0" layoutY="378.0" mnemonicParsing="false" onAction="#cancelar" prefHeight="37.0" prefWidth="75.0" text="Cancelar" />
+      <Hyperlink layoutX="28.0" layoutY="385.0" onAction="#menuLogin" text="Regresar a Login" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Hyperlink>
+   </children>
+</AnchorPane>

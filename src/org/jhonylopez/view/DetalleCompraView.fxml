@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fitHeight="600.0" fitWidth="800.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/fondoDetalleCompra.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="305.0" layoutY="22.0" text="Detalle Compra" textFill="WHITE">
+         <font>
+            <Font name="Bodoni MT" size="29.0" />
+         </font>
+      </Label>
+      <Label layoutX="75.0" layoutY="74.0" text="Número Documento" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="75.0" layoutY="119.0" text="Proveedor" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="75.0" layoutY="162.0" text="Fecha" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="75.0" layoutY="240.0" text="Código Producto" underline="true">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="309.0" layoutY="240.0" text="Descripción" underline="true">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="503.0" layoutY="240.0" text="Cantidad" textFill="#e8e8e8" underline="true">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="642.0" layoutY="517.0" text="0.00" textFill="WHITE" underline="true">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </Label>
+      <Label layoutX="503.0" layoutY="517.0" text="TOTAL" textFill="WHITE">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </Label>
+      <TextField layoutX="252.0" layoutY="72.0" prefHeight="25.0" prefWidth="223.0" promptText="---Ingrese número de documento---" />
+      <TextField layoutX="252.0" layoutY="117.0" prefHeight="25.0" prefWidth="223.0" promptText="---Ingrese Proveedor---" />
+      <TextField layoutX="252.0" layoutY="160.0" prefHeight="25.0" prefWidth="223.0" promptText="---Ingrese fecha---" />
+      <TextField layoutX="57.0" layoutY="269.0" promptText="Ingrese código" />
+      <TextField layoutX="253.0" layoutY="269.0" prefHeight="25.0" prefWidth="191.0" promptText="Ingrese descripción" />
+      <TextField layoutX="471.0" layoutY="269.0" promptText="Ingrese cantidad" />
+      <TableView layoutX="50.0" layoutY="309.0" prefHeight="200.0" prefWidth="700.0">
+        <columns>
+          <TableColumn prefWidth="101.0" text="Código" />
+          <TableColumn prefWidth="225.0" text="Descripción" />
+            <TableColumn prefWidth="119.0" text="Cantidad" />
+            <TableColumn prefWidth="130.0" text="Precio" />
+            <TableColumn prefWidth="124.0" text="SubTotal" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
